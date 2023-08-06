@@ -2,9 +2,9 @@
 {% load django_bootstrap5 %}
 {% block title %}
   {% if '/edit_comment/' in request.path %}
-    Редактирование комментария
+    Edit comment
   {% else %}
-    Удаление комментария
+    Delete comment
   {% endif %}
 {% endblock %}
 {% block content %}
@@ -29,7 +29,7 @@
             {% else %}
               <p>{{ comment.text }}</p>
             {% endif %}
-            {% bootstrap_button button_type="submit" content="Отправить" %}
+            {% bootstrap_button button_type="submit" content="Save" %}
           </form>
         </div>
       </div>
